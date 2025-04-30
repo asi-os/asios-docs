@@ -1,9 +1,8 @@
----
 
-**ASIOS™: Technical Vision**  
+**ASIOS™: Technical Vision**
 *Envisioned to Host and Sustain Cognition, Synthetic Intelligence*
 
----
+
 
 ## Executive Summary
 
