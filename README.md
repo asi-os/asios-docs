@@ -70,3 +70,7 @@ All “Must Be Developed” code is AGPL-3.0-or-later. See the full license text
 ---
 
 *Need help?* See the [Support guide](https://github.com/asi-os/.github/blob/main/SUPPORT.md) or join Discord → <https://discord.gg/rWuU7cWU4E>  
+
+© 2025 KarLex AI, Inc. — All rights reserved.  
+🔗 [Legal & Governance Portal](https://asios.ai/legal)  
+
