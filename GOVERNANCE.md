@@ -1,12 +1,17 @@
 
+---
+
 # ASIOS™ Governance & Control Framework  
 **KarLex AI, Inc. (Delaware C-Corp)**
 
-This document establishes governance, licensing, contribution guidelines, and release processes for **ASIOS™**, aligning open-core community principles with corporate oversight under Delaware law. With **full transparency**, the entire 12-phase ASIOS™ roadmap is open-source, ensuring community participation at every stage.
+This document establishes governance, licensing, contribution guidelines, and release processes for **ASIOS™**, aligning open-core community principles with corporate oversight under Delaware law. With **full transparency**, the entire 12-phase **ASIOS™** [Architecture](https://github.com/asi-os/asios-docs/edit/main/GOVERNANCE.md) is open-source, ensuring community participation at every stage.
+
+While **ASIOS™** embraces open-source principles, **KarLex AI, Inc.** retains the ability to integrate proprietary, enterprise-grade, and security-focused components into the platform. This approach allows us to provide commercial offerings, tailored security features, and specialized enterprise services, similar to the models used by organizations like Red Hat and Ubuntu. These proprietary modules and enhancements are built to complement the open-source core, ensuring that **ASIOS™** can meet both community-driven innovation and the specific needs of enterprise clients.
+
 
 ---
 
-## 1. Corporate & Organizational Structure  
+## 1. **Corporate & Organizational Structure**
 
 | Entity                            | Responsibilities                                        | Appeals Path            |
 |-----------------------------------|---------------------------------------------------------|-------------------------|
@@ -21,7 +26,7 @@ This document establishes governance, licensing, contribution guidelines, and re
 
 ---
 
-## 2. Repository Structure  
+## 2. **Repository Structure**
 
 All under `github.com/asi-os/` (public):
 
@@ -38,7 +43,7 @@ CI/CD runs multi-arch builds and tests via GitHub Actions.
 
 ---
 
-## 3. Licensing & IP  
+## 3. **Licensing & IP**
 
 | Component                          | License                   | SPDX ID            |
 |------------------------------------|---------------------------|--------------------|
@@ -48,29 +53,29 @@ CI/CD runs multi-arch builds and tests via GitHub Actions.
 | Documentation & examples           | MIT / Apache-2.0          | MIT, Apache-2.0    |
 | Proprietary enterprise modules     | KarLex AI Commercial      | Proprietary        |
 
-- Contributors grant KarLex AI worldwide patent license upon acceptance.  
+- Contributors grant **KarLex AI** worldwide patent license upon acceptance.  
 - Commercial license forbids redistribution and reverse engineering.
 
 ---
 
-## 4. Trademarks & Branding  
+## 4. **Trademarks & Branding**
 
-“ASIOS™” and KarLex AI logos are trademarks of KarLex AI, Inc.  
+“ASIOS™” and **KarLex AI** logos are trademarks of **KarLex AI, Inc.**  
 Unauthorized use is prohibited; forks must remove all trademarks.  
 Contact: trademarks@karlex.ai
 
 ---
 
-## 5. Contribution & IP Governance  
+## 5. **Contribution & IP Governance**
 
-- **CLA**: Sign ICLA (individual) or ensure CCLA (corporate) via CLA Assistant.  
+- **CLA**: Sign **ICLA** (individual) or ensure **CCLA** (corporate) via CLA Assistant.  
 - **DCO**: Every commit must include `Signed-off-by:`.  
-- **Ethical Review**: High-risk contributions reviewed against the Ethical AI Policy.  
+- **Ethical Review**: High-risk contributions reviewed against the **Ethical AI Policy**.  
 - **Multi-Arch Validation**: Required before merge.
 
 ---
 
-## 6. Decision-Making Processes  
+## 6. **Decision-Making Processes**
 
 - **RFC Workflow**: Draft in `asios-docs/rfcs/` → Discussion → CSC ratification → CTO approval.  
 - **Meetings**: CSC quarterly; TWGs bi-monthly.  
@@ -78,7 +83,7 @@ Contact: trademarks@karlex.ai
 
 ---
 
-## 7. Release Cadence & QA  
+## 7. **Release Cadence & QA**
 
 | Type               | Frequency | Focus                                       |
 |--------------------|-----------|---------------------------------------------|
@@ -91,7 +96,7 @@ QA includes automated CI tests, multi-arch performance/security benchmarks.
 
 ---
 
-## 8. Compliance & Auditing  
+## 8. **Compliance & Auditing**
 
 - **License audits**: Quarterly, results published.  
 - **Security response**: CVEs addressed in 7 days; disclosure per policy.  
@@ -99,13 +104,13 @@ QA includes automated CI tests, multi-arch performance/security benchmarks.
 
 ---
 
-## 9. Monetization & Partnerships  
+## 9. **Monetization & Partnerships**
 
 Enterprise subscriptions, cloud marketplace offerings, OEM partnerships, and consulting services.
 
 ---
 
-## 10. Risk Management  
+## 10. **Risk Management**
 
 - Bi-weekly upstream rebases  
 - Automated cross-compile and CI pipelines  
@@ -113,7 +118,7 @@ Enterprise subscriptions, cloud marketplace offerings, OEM partnerships, and con
 
 ---
 
-## 11. Next Milestones  
+## 11. **Next Milestones**
 
 1. **Dec 2025**: Beta v1.0 release (public ISO)  
 2. **Mar 2026**: Stable v1.0 GA  
@@ -122,21 +127,21 @@ Enterprise subscriptions, cloud marketplace offerings, OEM partnerships, and con
 
 ---
 
-## 12. Architecture Governance  
+## 12. **Architecture Governance**
 
 - **TWGs**: Architecture-specific working groups  
 - **Cross-Arch Review**: Ensures feature parity and compliance
 
 ---
 
-## 13. Multi-Arch Management  
+## 13. **Multi-Arch Management**
 
 - Shared code in `src/common/`; arch-specific in `arch/x86_64/`, `arch/arm64/`.  
 - Parallel CI for each architecture.
 
 ---
 
-## Document History & Forward-Looking Statements  
+## Document History & Forward-Looking Statements
 
 See version log in `CHANGELOG.md`.  
 This document contains forward-looking statements subject to risks and uncertainties.
@@ -144,4 +149,6 @@ This document contains forward-looking statements subject to risks and uncertain
 ---
 
 © 2025 KarLex AI, Inc. — All rights reserved.  
-🔗 [Legal & Governance Portal](https://asios.ai/legal)  
+🔗 [Legal & Governance Portal](https://asios.ai/legal)
+
+---
