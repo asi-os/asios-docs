@@ -6,7 +6,7 @@
 
 This document establishes governance, licensing, contribution guidelines, and release processes for **ASIOS™**, aligning open-core community principles with corporate oversight under Delaware law. With **full transparency**, the entire 12-phase **ASIOS™** [Architecture](https://github.com/asi-os/asios-docs/edit/main/GOVERNANCE.md) is open-source, ensuring community participation at every stage.
 
-While **ASIOS™** embraces open-source principles, **KarLex AI, Inc.** retains the ability to integrate proprietary, enterprise-grade, and security-focused components into the platform. This approach allows us to provide commercial offerings, tailored security features, and specialized enterprise services, similar to the models used by organizations like Red Hat and Ubuntu. These proprietary modules and enhancements are built to complement the open-source core, ensuring that **ASIOS™** can meet both community-driven innovation and the specific needs of enterprise clients.
+While **ASIOS™** follows an open-source model, **KarLex AI, Inc.** retains the ability to develop and integrate proprietary, enterprise-grade, and security-specific components. These proprietary enhancements can include specialized tools, advanced security features, and enterprise support services, similar to how Red Hat and Ubuntu offer both open-source foundations and additional commercial offerings. This hybrid approach allows **KarLex AI** to meet the needs of both the open-source community and enterprise customers seeking tailored, secure, and robust solutions.
 
 
 ---
