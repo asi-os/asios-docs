@@ -672,7 +672,7 @@ A phase closes only when **all** items below are true:
 
 **Size: L (≤4 months)**
 
-### Phase 12: Cross-Architecture Support, Upstream Sync & Community Collaboration
+### Phase 12: Cross-Architecture Support, Upstream Sync
 
 **Focus:** Finalize cross-platform support and put processes in place for ongoing maintenance, upstream contribution, and community engagement.
 
