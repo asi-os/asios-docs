@@ -182,7 +182,7 @@ A phase closes only when **all** items below are true:
 - **Boot-Time Optimization:** Develop boot profiling tooling and implement fast-boot optimizations to minimize startup time, enabling quicker recovery in production environments.
 - **Early Cross-Architecture Tools:** Establish cross-compilation infrastructure during initial development to ensure compatibility across x86_64, ARM64, and RISC-V, with special attention to AWS Graviton and Apple M1/M2 platforms.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Ubuntu 24.04.2 LTS Base:** Leverage the official Ubuntu 24.04.2 LTS as the starting point, including its HWE stack with Linux kernel 6.11.
 - **Essential Packages:** Install development toolchains and base utilities (`build-essential`, `git`) needed for building modules in later phases.
 - **HWE Compatibility Enablement:** Adopt Ubuntu's Hardware Enablement (HWE) approach, which guarantees forward compatibility with newer kernels.
@@ -232,7 +232,7 @@ A phase closes only when **all** items below are true:
 - **Kernel Build & Packaging:** Compile a custom kernel (v6.11.x) and package it (as .deb packages) for distribution. The custom kernel will serve as ASIOS™'s "performance kernel".
 - **Testing Custom Kernel:** Write a comprehensive test suite to verify kernel performance and stability across various AI workloads and hardware configurations.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Upstream Patches & Modules:** Integrate relevant upstream kernel patches that benefit HPC/AI. For instance, consider applying the latest **bcachefs** filesystem patch if stable.
 - **CPU Scheduling Options:** While using the default CFS for now, enable the **SCHED_DEADLINE** and **SCHED_CORE** options in the kernel to allow real-time and core-wide scheduling if needed.
 - **Profiling Tools:** Install kernel profiling and tuning tools to aid development (`perf`, `tuned`, `likwid`).
@@ -273,7 +273,7 @@ A phase closes only when **all** items below are true:
 - **Predictive Scheduling Model:** Implement a machine learning-based predictive scheduler that can anticipate resource needs based on workload classification (e.g., training vs. inference, CNNs vs. transformers) and adjust scheduling policies proactively.
 - **Multi-Arch Scheduling Tests:** Develop test routines to verify scheduling behavior on different architectures.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Cgroups v2 & Systemd Integration:** Leverage Linux's cgroup v2 for resource control. Use systemd's built-in support to pin services to specific cores.
 - **Taskset & Tuna (Utilities):** Include `taskset` and Red Hat's `tuna` tool to allow manual fine-tuning of CPU affinities and interrupt affinities.
 - **Kernel Scheduling Features:** Enable and configure existing scheduler features: for instance, use Linux's **isolcpus** boot parameter to isolate cores, and enable **sched_alloc_hint**.
@@ -314,7 +314,7 @@ A phase closes only when **all** items below are true:
 - **Adaptive THP Policies:** Implement a service that can dynamically toggle between THP "always" and "madvise" modes based on workload characteristics and performance metrics, optimizing for different phases of AI workloads.
 - **Dynamic Memory Overcommit Manager:** Create a daemon that adjusts memory overcommit settings based on workload analysis, optimizing for AI training (which benefits from overcommit) versus inference (where deterministic memory usage is preferred).
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **NUMA Tools:** Install `numactl` and `hwloc` (Topology awareness libraries).
 - **Transparent Huge Pages (THP):** Use the kernel's transparent huge page feature in always mode for AI processes. Configure `transparent_hugepage/enabled = always` and `defrag = defer+madvise`.
 - **Memory Overcommit & Swapping Config:** Tune existing kernel parameters to favor performance (e.g., `vm.swappiness = 0`).
@@ -359,7 +359,7 @@ A phase closes only when **all** items below are true:
   - Read-heavy operations (dataset loading) to high-throughput devices
   - Mixed workloads with appropriate caching strategies
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **High-Performance Filesystem Selection:** Use **XFS** or **Btrfs** as the default filesystem for data volumes. Format the default data partition as XFS for parallel I/O, while using EXT4 for the OS partition.
 - **Filesystem Tuning:** Apply known tuning parameters: for XFS, larger allocation groups; for EXT4, `data=writeback` and disable journaling for scratch data if acceptable.
 - **Asynchronous I/O (io_uring):** Ensure the **io_uring** subsystem is available and optimized.
@@ -404,7 +404,7 @@ A phase closes only when **all** items below are true:
   - Specialized buffer management for large tensor transfers
 - **Network Function Virtualization Integration:** Develop interfaces for dynamic network resource scaling via NFV technologies.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **RDMA Stack & Drivers:** Install **RDMA-Core** package to provide support for InfiniBand and RoCE. Enable relevant kernel modules like `mlx5_core` and `mlx5_ib` for Mellanox adapters.
 - **GPUDirect RDMA Preparations:** Configure the system for GPUDirect RDMA capability by enabling peer-to-peer memory access in the kernel and drivers.
 - **TCP/IP Stack Tuning:** Apply static tuning for the TCP/IP stack: increase `net.core.rmem_max` and `wmem_max`, set default congestion control to `bbr`.
@@ -448,7 +448,7 @@ A phase closes only when **all** items below are true:
 - **Cross-Vendor GPU Framework:** Create a unified abstraction layer that provides consistent management interfaces across NVIDIA, AMD, and Intel GPUs, enabling vendor-neutral GPU orchestration.
 - **TPU & Specialized Accelerator Support:** Develop integration for Google TPUs, Intel NNP, and other specialized AI accelerators.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **GPU Drivers and ROCm:** Install and configure drivers for GPUs. For NVIDIA GPUs, use the open kernel interface. For AMD accelerators, install the ROCm stack.
 - **Peer-to-Peer DMA Enablement:** Turn on kernel features for GPU peer memory. Make sure that **PCIe P2P** is enabled (`CONFIG_PCI_P2PDMA`) and load the `nvidia-peermem` module for NVIDIA GPUs.
 - **CUDA and ROCm Libraries:** Provide user-space libraries such as CUDA (if user accepts EULA) or open-source alternatives, and AMD's ROCm.
@@ -493,7 +493,7 @@ A phase closes only when **all** items below are true:
 - **Quantum-Safe Cryptography:** Implement or integrate post-quantum cryptographic libraries for future-proofing security-critical components.
 - **AI Model Protection:** Develop mechanisms for model encryption, watermarking, and secure loading to prevent model theft or tampering.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Linux Security Modules:** Leverage existing kernel security frameworks. Enable **AppArmor** (Ubuntu default) or **SELinux**, and **seccomp** for services that can drop privileges.
 - **Kernel Hardening Settings:** Turn on kernel features like **Kernel Page Table Isolation (KPTI)**, **retpoline**, and other relevant mitigations for side-channel attacks.
 - **Falco (Runtime Security):** Install **Falco**, an open-source eBPF-powered runtime security tool that monitors system calls for abnormal behavior.
@@ -542,7 +542,7 @@ A phase closes only when **all** items below are true:
   - GPU/CPU data transfer bottleneck detection
   - Memory access pattern analysis for different model architectures
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Netdata / Prometheus:** Deploy a modern open-source monitoring solution such as **Netdata** for real-time metrics and anomaly flags.
 - **System Logs and Traces:** Use **systemd-journald** for centralized logging. Include `bcc` and `bpftrace` for tracing support.
 - **Hardware Telemetry:** Utilize `lm-sensors` for CPU temps and fan speeds, `smartmontools` for disk health, and **RAS tools** for hardware events.
@@ -590,7 +590,7 @@ A phase closes only when **all** items below are true:
 - **Predictive Maintenance Framework:** Implement predictive maintenance capabilities that can forecast component failures before they occur, enabling proactive replacement or workload migration.
 - **Safety Guardrails:** Implement fail-safe mechanisms to ensure self-healing actions don't cause cascading failures or unintended consequences.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Netdata's Anomaly Alerts:** Leverage Netdata's built-in anomaly detection and alerting for detecting deviations from expected metrics.
 - **Integration with Falco and Logs:** Utilize Falco for detecting anomalies via its rules system, and employ log monitoring tools to scan for critical keywords.
 - **Hardware Failure Daemons:** Enable `mcelog` on x86_64 and equivalent EDAC drivers on ARM to catch hardware error events.
@@ -639,7 +639,7 @@ A phase closes only when **all** items below are true:
 - **Profile-Based Tuning Mode:** Develop a capability to detect known workload types and apply pre-defined tuning profiles.
 - **Safety Guardrails for Adaptive Learning:** Implement mechanisms to prevent unintended consequences in the auto-tuning system, including controlled exploration and safe fallback policies.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Tuned** (Profile Tuning): Install Red Hat's **tuned** utility which provides a framework for switching performance profiles.
 - **auto-cpufreq:** Include **auto-cpufreq**, a tool that automatically adjusts CPU frequency governor and turbo based on current load.
 - **AI Libraries for Optimization:** Provide packages for libraries that could be used in tuning, such as **Bayesian optimization** frameworks (Optuna) or **OpenTuner**.
@@ -682,7 +682,7 @@ A phase closes only when **all** items below are true:
 - **Upstream Contribution Patches:** For any kernel-level changes we made, prepare patches to submit upstream where feasible.
 - **Multi-Platform Test Infrastructure:** Expand CI/CD to test across all supported platforms, including AWS Graviton, Apple M1/M2, and emerging ARM64 hardware.
 
-**Open Source - Existing to Be Installed:**
+**Open Source:**
 - **Multi-Arch Tooling:** Use cross-compilation and CI tools to regularly build and test for ARM64. Leverage QEMU for testing if real hardware is limited.
 - **Ubuntu & Kernel Updates:** Keep tracking Ubuntu's LTS updates and the next LTS (Ubuntu 26.04, kernel 6.15+ etc.). Use Ubuntu's apt and UA notifications for security updates.
 
