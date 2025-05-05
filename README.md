@@ -1,5 +1,6 @@
 
 # 📚 ASIOS™ Documentation
+[![Sponsor](https://img.shields.io/github/sponsors/asi-os?label=Sponsor&logo=github)](https://github.com/sponsors/asi-os)
 
 Welcome to the **ASIOS™** docs repository—your single source for design, governance, architecture, and roadmap artifacts.
 
