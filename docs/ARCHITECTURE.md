@@ -1,6 +1,6 @@
 
 # ASIOS™ Architecture & Roadmap
-
+Last updated: 2024-05-09
 ## Overview
 
 ASIOS™ (Artificial Superintelligence Operating System) represents a new class of operating system designed from first principles for artificial intelligence workloads. Our vision is to create the foundational infrastructure layer capable of supporting increasingly sophisticated AI systems - from today's deep learning applications to tomorrow's more advanced cognitive architectures, including potential Artificial General Intelligence (AGI) systems, brain-inspired neural architectures, and large-scale multi-modal reasoning systems.
@@ -144,11 +144,22 @@ All benchmarks and methodologies are published openly to ensure transparency and
 
 ## Project Scope & Principles
 
-- **Base:** Ubuntu 24.04 LTS + HWE 6.11 kernel (with forward merge commitment to HWE 6.14 or 6.15)
-- **Architectures:** x86-64 (tier-1), ARM64 (tier-1), RISC-V (tech-preview)
-- **Out of scope:** Proprietary AI platform, cluster orchestrators, end-user UX
-- **Governance:** Open-core; GPL-v2 for kernel mods, Apache-2 for user-space; DCO sign-off
-- **License:** All items under **Must Be Developed** are licensed **AGPL-3.0-or-later** (unless they derive from another upstream license). All **Open Source – Existing to Be Installed** items retain their upstream licenses.
+- **Base:** Ubuntu 24.04 LTS + HWE 6.11 kernel (forward-merge commitment to HWE 6.14/6.15)  
+- **Architectures:** x86-64 (tier-1), ARM64 (tier-1), RISC-V (tech-preview)  
+- **Out of scope:** Proprietary AI platform, cluster orchestrators, end-user UX  
+- **Governance:** Open-core; GPL-2.0-only for kernel, Apache-2.0 for user-space; DCO sign-off  
+- **License:** See the full [ASIOS™ LICENSE SUMMARY](https://github.com/asi-os/asios-legal/blob/main/LICENSE). In brief:  
+  - **GPL-2.0-only** for asios-core (kernel patches & in-kernel modules)  
+  - **GPL-3.0-or-later** for asios-userspace (user-space daemons & services)  
+  - **AGPL-3.0-or-later** for community modules & all “Must Be Developed” deliverables (community-driven)  
+  - **MIT** for helper tools & scripts  
+  - **Apache-2.0** for build tooling & SDKs  
+  - **CC-BY-SA-4.0** for docs, tutorials & website content  
+  - **KarLex AI Commercial License** for proprietary enterprise modules, including select “Must Be Developed” components  
+
+> **Note:** This document is a living specification and may be updated to introduce new enterprise-only features over time.  
+> Future enterprise extensions will be provided under a separate proprietary license by KarLex AI, Inc.
+
 
 ---
 
