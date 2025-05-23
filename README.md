@@ -15,7 +15,6 @@ Welcome to the **ASIOS™** docs repository—your single source for design, gov
 | **CHANGELOG.md**             | Keep-a-Changelog record of major public releases                 |
 | **COMMUNITY_GUIDELINES.md**  | Community rules and best practices (see canonical Code of Conduct)|
 | **GOVERNANCE.md**            | Governance structure and decision-making                         |
-| **TECHNICAL_VISION.md**      | Architectural decisions and long-term AI infrastructure vision    |
 | **COPYRIGHT.md**             | Copyright ownership and licensing basics                         |
 | **FORK.md**                  | Forking policy and derivative-use guidelines                     |
 
